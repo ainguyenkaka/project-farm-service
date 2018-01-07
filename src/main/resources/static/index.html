@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="farmServiceApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Farm Service</title>
+</head>
+<body>
+<h1>This is the service for farm applications</h1>
+<a href="/VGarden/swagger-ui/index.html">Test APIs</a>
+<p></p>
+<div ng-controller="LoginController as vm">
+    <form ng-show="!vm.isAuthenticated">
+        <input placeholder="Username" name="username" type="text" ng-model="vm.account.username"/>
+        <input placeholder="Password" name="password" type="password" ng-model="vm.account.password"/>
+        <button type="submit" ng-click="vm.login()">Login</button>
+    </form>
+    <button type="button" ng-click="vm.logout()" ng-show="vm.isAuthenticated">Logout</button>
+</div>
+
+<script src="js/angular.min.js"></script>
+<script src="js/app.module.js"></script>
+<script src="js/main.controller.js"></script>
+</body>
+</html>

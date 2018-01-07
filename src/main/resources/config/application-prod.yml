@@ -1,0 +1,36 @@
+
+spring:
+    profiles:
+        active: prod
+        include: swagger
+    devtools:
+        restart:
+            enabled: false
+        livereload:
+            enabled: false
+    data:
+        mongodb:
+            uri: mongodb://localhost:9001
+            database: farmService
+    mail:
+        host: localhost
+        port: 25
+        username:
+        password:
+
+
+server:
+    port: 8081
+
+
+application:
+    security:
+        authentication:
+            jwt:
+                secret: 7c2f4aa1973e8787aa75950251653c85f7e91538
+                token-validity-in-seconds: 86400
+                token-validity-in-seconds-for-remember-me: 2592000
+    mail:
+        from: farmService@localhost
+        base-url: http://my-server-url-to-change
+        to: ainguyenkaka@gmail.com

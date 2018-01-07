@@ -1,0 +1,49 @@
+
+spring:
+    application:
+        name: farmService
+    jackson:
+        serialization.write_dates_as_timestamps: false
+    messages:
+        basename: i18n/messages
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: XHTML
+
+security:
+    basic:
+        enabled: false
+
+server:
+    session:
+        cookie:
+            http-only: true
+
+info:
+    project:
+        version: 1.0
+
+application:
+    async:
+        core-pool-size: 2
+        max-pool-size: 50
+        queue-capacity: 10000
+
+    mail:
+        from: farmService@localhost
+    swagger:
+        default-include-pattern: /api/.*
+        title: farmService API
+        description: farmService API documentation
+        version: 0.0.1
+        terms-of-service-url:
+        contact-name:
+        contact-url:
+        contact-email:
+        license:
+        license-url:
+    ribbon:
+        display-on-active-profiles: dev
+

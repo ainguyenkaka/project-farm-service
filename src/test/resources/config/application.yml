@@ -1,0 +1,40 @@
+
+spring:
+    application:
+        name: farmService
+    jackson:
+        serialization.write_dates_as_timestamps: false
+    cache:
+        type: none
+    data:
+        mongodb:
+            host: localhost
+            port: 27117
+            database: farmService
+    mail:
+        host: localhost
+    messages:
+        basename: i18n/messages
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: XHTML
+
+security:
+    basic:
+        enabled: false
+
+server:
+    port: 10344
+    address: localhost
+
+application:
+    security:
+        authentication:
+            jwt:
+                secret: 7c2f4aa1973e8787aa75950251653c85f7e91538
+                token-validity-in-seconds: 86400
+    mail:
+        from: farmService@localhost
+        base-url: http://127.0.0.1:8081

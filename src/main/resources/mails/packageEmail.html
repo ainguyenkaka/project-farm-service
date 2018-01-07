@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="#{email.package.title}">Farm creation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<p th:text="#{email.package.message}">
+    You have new service package
+</p>
+<p th:text="#{email.package.text1}">
+    Check it out
+</p>
+<p>
+    <a th:href="@{|${baseUrl}|}">VGraden</a>
+</p>
+<p>
+    <em th:text="#{email.signature}">Farm.</em>
+</p>
+</body>
+</html>

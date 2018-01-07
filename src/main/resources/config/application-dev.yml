@@ -1,0 +1,49 @@
+
+spring:
+    profiles:
+        active: dev
+        include: swagger
+    devtools:
+        restart:
+            enabled: true
+        livereload:
+            enabled: false
+    jackson:
+        serialization.indent_output: true
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017
+            database: farmService
+    mail:
+        host: localhost
+        port: 25
+        username:
+        password:
+    messages:
+        cache-seconds: 1
+    thymeleaf:
+        cache: false
+
+server:
+    port: 8081
+
+
+application:
+    cors:
+        allowed-origins: "*"
+        allowed-methods: GET, PUT, POST, DELETE, OPTIONS
+        allowed-headers: "*"
+        exposed-headers:
+        allow-credentials: true
+        max-age: 1800
+    security:
+        authentication:
+            jwt:
+                secret: my-secret-token-to-change-in-production
+                token-validity-in-seconds: 86400
+                token-validity-in-seconds-for-remember-me: 2592000
+    mail:
+        from: farmService@localhost
+        base-url: http://127.0.0.1:8081
+        to: ainguyenkaka@gmail.com
+
